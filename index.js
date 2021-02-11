@@ -5,7 +5,7 @@ var sentnow = 'no'
 var tosend = 0
 client.on("ready", () => {
     console.log("Bot Online");
-    client.user.setPresence({ activity: { name: 'NOOO!!!!' }, status: 'dnd' });
+    client.user.setPresence({ activity: { name: 'NOOO!!!! | no.help' }, status: 'dnd' });
 })
 client.on("message", msg => {
     if (msg.author == client.user) {

@@ -7,8 +7,6 @@ client.on("ready", () => {
     client.user.setPresence({ activity: { name: 'NOOO!!!!' }, status: 'dnd' });
 })
 client.on("message", msg => {
-    const args = msg.content.slice(prefix.length).trim().split(' ');
-const command = args.shift().toLowerCase();
     if (msg.author == client.user) {
         return;
     } else if (msg.author.bot) {
@@ -16,7 +14,7 @@ const command = args.shift().toLowerCase();
     } else if (msg.content === 'no') {
         msg.channel.send('yes')
         
-    }else if (args.includes('?')) {
+    }else if (msg.content.slice(-1) === '?') {
         msg.channel.send('no');
         setTimeout(function(){ 
             console.log('waiting') 

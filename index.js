@@ -17,6 +17,8 @@ client.on("message", msg => {
             msg.channel.send('no');
         }else if (tosend === 1) {
             msg.channel.send('yes')
+        }else if (tosend === undefined) {
+            msg.channel.send('oops')
         }
         
     }

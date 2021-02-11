@@ -4,7 +4,6 @@ client.on("ready", () => {
     console.log("Bot Online");
     client.user.setActivity('To Messages, and no.help', { type: 'LISTENING' });
     client.user.setStatus('dnd');
-    var value = 'no'
 })
 client.on("message", msg => {
     if (msg.author == client.user) {
@@ -12,7 +11,11 @@ client.on("message", msg => {
     } else if (msg.author.bot) {
         return;
     } else {
+<<<<<<< HEAD
         msg.channel.send(value);
+=======
+        msg.channel.send("No");
+>>>>>>> parent of 6055214 (add swap)
     }
     
     
@@ -58,15 +61,5 @@ client.on('message', message => {
           embed.setFooter('yesnobot')
           message.channel.send(embed);
       }
-  })
-  client.on('message', message => {
-      if (message.content === 'no.swap') {
-          if  (value === 'no') {
-              value = 'yes'
-          }
-       else if (value === 'yes') {
-          value = 'no'
-      }
-    }
   })
 client.login('ODA5MjQ4MjY4NzQzNzM3MzY0.YCSVLg.jXFgFj-SJjziEhafTd-jGohVrvE');

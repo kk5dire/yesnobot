@@ -140,10 +140,10 @@ try {
     if (typeof evaled !== "string")
        evaled = require("util").inspect(evaled);
 
-       message.channel.send(clean(evaled), {code:"x1"});
+       message.channel.send(evaled, {code:"x1"});
 
 } catch (err) {
-    message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+    message.channel.send(`\`ERROR\` \`\`\`xl\n${err}\n\`\`\``);
 
 }
      }

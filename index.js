@@ -15,7 +15,15 @@ client.on("message", msg => {
     }
     
     
-   
+
+})
+client.on('message', message => {
+    if (message.content === '<@809248268743737364>') {
+        const embed = new Discord.MessageEmbed
+        embed.setTitle("Prefix")
+        embed.setDescription("My prefix is \"no.\"")
+        message.channel.send(embed);
+    }
 })
 client.on('message', message => {
     if (message.content === 'no.ping') {

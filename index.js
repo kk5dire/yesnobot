@@ -42,20 +42,10 @@ client.on("message", msg => {
     }else {
         msg.react('809306253686997012')
     }
-     
-   
-        
-
-    
-    
-
 })
 client.on('message', message => {
-    if (message.content === '<@809248268743737364>') {
-        const embed = new Discord.MessageEmbed
-        embed.setTitle("Prefix")
-        embed.setDescription("My prefix is \"no.\"")
-        message.channel.send(embed);
+    if (message.content.split(" ").includes('yes') === true) {
+        message.react('737449100009799752')
     }
 })
 client.on('message', message => {

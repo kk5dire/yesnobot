@@ -4,9 +4,9 @@ client.on("ready", () => {
     console.log("Bot Online")
 })
 client.on("message", msg => {
-    if (message.author == client.user) {
+    if (msg.author == client.user) {
         return;
-    } else if (message.author.bot) {
+    } else if (msg.author.bot) {
         return;
     } else {
         msg.channel.send("No");

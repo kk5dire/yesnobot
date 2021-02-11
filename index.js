@@ -12,7 +12,10 @@ client.on("message", msg => {
         return;
     } else if (msg.author.bot) {
         return;
-    } else {
+    } else if (msg.content === 'yes') {
+        msg.channel.send('yes')
+        
+    }else {
         if (tosend === 0) {
             msg.channel.send('no');
         }else if (tosend === 1) {
@@ -20,7 +23,6 @@ client.on("message", msg => {
         }else if (tosend === undefined) {
             msg.channel.send('oops')
         }
-        
     }
     
     

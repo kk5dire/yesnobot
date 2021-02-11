@@ -29,7 +29,7 @@ client.on("message", msg => {
         setTimeout(function(){ 
             console.log('waiting') 
         }, 3000);
-    }else if (msg.content.split(" ").indexOf('yes') === true ) {
+    }else if (msg.content.split(" ").indexOf('yes',0) === true ) {
         msg.channel.send('no');
         setTimeout(function(){ 
             console.log('waiting') 

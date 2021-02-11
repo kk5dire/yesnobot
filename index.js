@@ -151,7 +151,7 @@ try {
      }
   })
   client.on('message', message => {
-      if (message.content === 'no.kill') {
+      if (message.content.split(" ").includes("no.kill") === true) {
         const args = message.content.split(" ").slice(1);
         let target;
         if (args.length) {target = args.join(' ')}

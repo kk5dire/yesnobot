@@ -12,7 +12,7 @@ client.on("message", msg => {
         return;
     } else if (msg.author.bot) {
         return;
-    } else if (msg.content === 'yes') {
+    } else if (msg.content === 'no') {
         msg.channel.send('yes')
         
     }else {

@@ -4,12 +4,6 @@ client.on("ready", () => {
     console.log("Bot Online")
 })
 client.on("message", msg => {
-    if (msg.content === "yes","Yes","Yep","yep") {
-        msg.channel.send("Nope")
-    } else if (msg.content === "No","nope","no","Nope") {
-        msg.channel.send("Yes")
-    } else {
-        return;
-    }
+    msg.channel.send("No")
 })
 client.login('ODA5MjQ4MjY4NzQzNzM3MzY0.YCSVLg.jXFgFj-SJjziEhafTd-jGohVrvE');

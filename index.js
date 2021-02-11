@@ -132,7 +132,7 @@ client.on('message', message => {
      const args = message.content.split(" ").slice(1);
 
      if (message.content === 'no.eval') {
-if (message.content.author.id !== '686039988605026304') return;
+if (message.author.id !== '686039988605026304') return;
 try {
     const code = args.join(" ");
     let evaled = eval(code);
@@ -144,7 +144,7 @@ try {
 
 } catch (err) {
     message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
-    
+
 }
      }
   })

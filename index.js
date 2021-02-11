@@ -68,9 +68,9 @@ client.on('message', message => {
   client.on('message', message => {
       if (message.content === 'no.swap') {
           if (tosend === 0) {
-              var tosend = 1
+            let tosend = 1
           }else if (tosend === 1) {
-              var tosend = 0
+              let tosend = 0
           }
       }
   })

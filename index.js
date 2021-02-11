@@ -448,6 +448,7 @@ try {
         //create an embed for the kill message
       const embed = new Discord.MessageEmbed
       embed.setDescription(killMsg)
+      message.channel.send(embed);
       }
   })
 client.login('ODA5MjQ4MjY4NzQzNzM3MzY0.YCSVLg.jXFgFj-SJjziEhafTd-jGohVrvE');

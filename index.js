@@ -49,8 +49,9 @@ client.on('message', message => {
     }
 })
 client.on('message', message => {
+  
     const messageReactStart = Number(new Date());
-    await reply.react('✅')
+    message.react('✅')
     const messageReactPing = Number(new Date()) - messageReactStart;
     if (message.content === 'no.ping') {
       const embed = new Discord.MessageEmbed

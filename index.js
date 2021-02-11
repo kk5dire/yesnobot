@@ -11,11 +11,7 @@ client.on("message", msg => {
     } else if (msg.author.bot) {
         return;
     } else {
-<<<<<<< HEAD
-        msg.channel.send(value);
-=======
         msg.channel.send("No");
->>>>>>> parent of 6055214 (add swap)
     }
     
     

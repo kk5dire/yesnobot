@@ -62,9 +62,9 @@ client.on('message', message => {
   client.on('message', message => {
       if (message.content === 'no.swap') {
           if (sentnow === 'no') {
-              let sentnow = 'yes'
+              var sentnow = 'yes'
           }else if (sentnow === 'yes') {
-              let sentnow = 'no'
+              var sentnow = 'no'
           }
       }
   })

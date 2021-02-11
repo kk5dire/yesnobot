@@ -20,21 +20,21 @@ client.on("message", msg => {
 client.on('message', message => {
     if (message.content === 'no.ping') {
       const embed = new Discord.MessageEmbed
-      .setTitle("Responce Ping")
-      .addField(`My Latency is ${Date.now() - message.createdTimestamp}ms.`)
-      .addField(`API Latency is ${Math.round(client.ws.ping)}ms`)
-      .setFooter("yesnobot")
+      embed.setTitle("Responce Ping")
+      embed.addField(`My Latency is ${Date.now() - message.createdTimestamp}ms.`)
+      embed.addField(`API Latency is ${Math.round(client.ws.ping)}ms`)
+      embed.setFooter("yesnobot")
       message.channel.send(embed);
     }
   });
   client.on('message', message => {
       if (message.content === 'no.limit') {
           const embed = new Discord.MessageEmbed
-          .setTitle("Limiting Bot To Channels")
-          .setImage('https://i.ibb.co/84rNWGr/sendperms.png')
-          .addField('Make sure the check is clicked on channels you want the bot to talk in')
-          .addField('And make sure the X is checked in channels you dont want the bot to talk in')
-          .setFooter("yesnobot")
+          embed.setTitle("Limiting Bot To Channels")
+          embed.setImage('https://i.ibb.co/84rNWGr/sendperms.png')
+          embed.addField('Make sure the check is clicked on channels you want the bot to talk in')
+          embed.addField('And make sure the X is checked in channels you dont want the bot to talk in')
+          embed.setFooter("yesnobot")
           message.channel.send(embed);
 
       }
@@ -42,11 +42,11 @@ client.on('message', message => {
   client.on('message', message => {
       if (message.content === 'no.help') {
           const embed = new Discord.MessageEmbed
-          .setTitle("Help Menu")
-          .addField('no.help - shows this menu')
-          .addField('no.ping - shows the bot ping')
-          .addField('no.limit shows how to limit the bot to certain channels')
-          .setFooter('yesnobot')
+          embed.setTitle("Help Menu")
+          embed.addField('no.help - shows this menu')
+          embed.addField('no.ping - shows the bot ping')
+          embed.addField('no.limit shows how to limit the bot to certain channels')
+          embed.setFooter('yesnobot')
           message.channel.send(embed);
       }
   })

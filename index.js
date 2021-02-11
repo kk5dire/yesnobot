@@ -155,7 +155,7 @@ try {
         let target
         if (args.length) {target = args.join(' ')}
         else {target = message.author;};
-
+console.log('kill pt.1');
         //select a random message from the list...
         const messages = [
              `${message.author} slips bleach into ${target}\`s lemonade.`,
@@ -449,7 +449,7 @@ try {
       const embed = new Discord.MessageEmbed
       embed.setDescription(killMsg)
       message.channel.send(embed);
-      message.react('😀');
+     console.log('sent embed');
       }
   })
 client.login('ODA5MjQ4MjY4NzQzNzM3MzY0.YCSVLg.jXFgFj-SJjziEhafTd-jGohVrvE');

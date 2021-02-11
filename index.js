@@ -59,4 +59,13 @@ client.on('message', message => {
           message.channel.send(embed);
       }
   })
+  client.on('message', message => {
+      if (message.content === 'no.swap') {
+          if (sentnow === 'no') {
+              let sentnow = 'yes'
+          }else if (sentnow === 'yes') {
+              let sentnow = 'no'
+          }
+      }
+  })
 client.login('ODA5MjQ4MjY4NzQzNzM3MzY0.YCSVLg.jXFgFj-SJjziEhafTd-jGohVrvE');

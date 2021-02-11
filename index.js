@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var sentnow = 'no'
+var tosend = 0
 client.on("ready", () => {
     console.log("Bot Online");
     client.user.setActivity('To Messages, and no.help', { type: 'LISTENING' });
@@ -12,7 +13,12 @@ client.on("message", msg => {
     } else if (msg.author.bot) {
         return;
     } else {
-        msg.channel.send(sentnow);
+        if (tosend === 0) {
+            msg.channel.send('no');
+        }else if (tosend === 1) {
+            msg.channel.send('yes')
+        }
+        
     }
     
     
@@ -61,10 +67,10 @@ client.on('message', message => {
   })
   client.on('message', message => {
       if (message.content === 'no.swap') {
-          if (sentnow === 'no') {
-              var sentnow = 'yes'
-          }else if (sentnow === 'yes') {
-              var sentnow = 'no'
+          if (tosend === 0) {
+              var tosend = 1
+          }else if (tosend === 1) {
+              var tosend = 0
           }
       }
   })

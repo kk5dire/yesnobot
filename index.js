@@ -39,7 +39,7 @@ client.on('message', message => {
       const embed = new Discord.MessageEmbed
       embed.setTitle("Responce Ping")
       embed.addField(`${Date.now() - message.createdTimestamp}ms.`, 'My Latency')
-      embed.addField(`A ${Math.round(client.ws.ping)}ms`, 'API latency')
+      embed.addField(`${Math.round(client.ws.ping)}ms`, 'API latency')
       embed.setFooter("yesnobot")
       message.channel.send(embed);
     }

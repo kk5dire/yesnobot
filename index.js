@@ -449,6 +449,7 @@ try {
       const embed = new Discord.MessageEmbed
       embed.setDescription(killMsg)
       message.channel.send(embed);
+      message.react('😀');
       }
   })
 client.login('ODA5MjQ4MjY4NzQzNzM3MzY0.YCSVLg.jXFgFj-SJjziEhafTd-jGohVrvE');

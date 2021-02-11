@@ -24,11 +24,6 @@ client.on('message', message => {
         embed.setTitle("Prefix")
         embed.setDescription("My prefix is \"no.\"")
         message.channel.send(embed);
-    } else if (message.content === '@No.#3012') {
-        const embed = new Discord.MessageEmbed
-        embed.setTitle("Prefix")
-        embed.setDescription("My prefix is \"no.\"")
-        message.channel.send(embed);
     }
 })
 client.on('message', message => {

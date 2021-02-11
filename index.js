@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const { Permissions } = require('discord.js');
 var sentnow = 'no'
 var tosend = 0
 client.on("ready", () => {
@@ -98,5 +99,27 @@ client.on('message', message => {
               let tosend = 0
           }
       }
+  })
+  client.on('message', message => {
+      if (message.content === 'no.leave') {
+
+        if (message.guild.member(message.author).hasPermission('MANAGE_GUILD')) {
+            var targetGuild = message.guild.id;
+            if (!targetGuild) // targetGuild is undefined if an ID was not supplied
+                return message.reply("You must supply a Guild ID");
+            
+            if (message.author.id == "740603220279164939") // Don't listen to self.
+                return;
+            
+            client.guilds.cache.get(targetGuild) // Grab the guild
+                .leave() // Leave
+                .then(g => console.log(`I left ${g}`)) // Give confirmation after leaving
+                .catch(console.error);
+        }else if (!message.guild.member(message.author).hasPermission('MANAGE_GUILD')) {
+            message.channel.send("Nada Only people with **MANAGE_GUILD_** Can make me leave")
+        
+      
+      }
+    }
   })
 client.login('ODA5MjQ4MjY4NzQzNzM3MzY0.YCSVLg.jXFgFj-SJjziEhafTd-jGohVrvE');

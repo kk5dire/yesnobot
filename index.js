@@ -19,13 +19,24 @@ client.on("message", msg => {
         setTimeout(function(){ 
             console.log('waiting') 
         }, 3000);
-    }else if (tosend === 1) {
+    }else if (msg.content.slice(-1) === '!') {
+        msg.channel.send('no');
+        setTimeout(function(){ 
+            console.log('waiting') 
+        }, 3000);
+    }else if (msg.content.slice(-1) === '.') {
+        msg.channel.send('no');
+        setTimeout(function(){ 
+            console.log('waiting') 
+        }, 3000);
+    } else if (tosend === 1) {
         msg.channel.send('yes')
     }else if (tosend === undefined) {
         msg.channel.send('oops')
     }else {
         msg.react('809306253686997012')
     }
+   
         
 
     

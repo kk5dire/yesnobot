@@ -152,6 +152,7 @@ try {
   })
   client.on('message', message => {
       if (message.content === 'no.kill') {
+        const args = message.content.split(" ").slice(1);
         let target;
         if (args.length) {target = args.join(' ')}
         else {target = message.author;};

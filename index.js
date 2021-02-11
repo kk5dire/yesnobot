@@ -49,10 +49,14 @@ client.on('message', message => {
     }
 })
 client.on('message', message => {
+    const messageReactStart = Number(new Date());
+    await reply.react('✅')
+    const messageReactPing = Number(new Date()) - messageReactStart;
     if (message.content === 'no.ping') {
       const embed = new Discord.MessageEmbed
       embed.setTitle("Responce Ping")
-      embed.addField(`${Date.now() - message.createdTimestamp}ms.`, 'My Latency')
+      embed.addField(`${Date.now() - message.createdTimestamp}ms.`, 'My Message Latency')
+      embed.addField(`${messageReactPing}`, 'My Reaction latency')
       embed.addField(`${Math.round(client.ws.ping)}ms`, 'API latency')
       embed.setFooter("yesnobot")
       message.channel.send(embed);

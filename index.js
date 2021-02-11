@@ -7,7 +7,7 @@ client.on("ready", () => {
     client.user.setPresence({ activity: { name: 'NOOO!!!!' }, status: 'dnd' });
 })
 client.on("message", msg => {
-    const args = message.content.slice(prefix.length).trim().split(' ');
+    const args = msg.content.slice(prefix.length).trim().split(' ');
 const command = args.shift().toLowerCase();
     if (msg.author == client.user) {
         return;

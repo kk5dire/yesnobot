@@ -152,7 +152,7 @@ try {
   })
   client.on('message', message => {
       if (message.content === 'no.kill') {
-        let target
+        let target;
         if (args.length) {target = args.join(' ')}
         else {target = message.author;};
 console.log('kill pt.1');

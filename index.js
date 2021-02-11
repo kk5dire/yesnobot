@@ -87,6 +87,8 @@ client.on('message', message => {
           embed.addField('no.help ', '- shows this menu')
           embed.addField('no.ping - ', 'shows the bot ping')
           embed.addField('no.limit ', '-shows how to limit the bot to certain channels')
+          embed.addField('no.invite', '-Invite the bot to another server')
+          embed.addField('<:ShieldWarning:746952447095996467> no.leave', '**REQUIRES: Manage_Guild** : Removes the bot from the entire server')
           embed.setFooter('yesnobot')
           message.channel.send(embed);
       }
@@ -121,5 +123,12 @@ client.on('message', message => {
       
       }
     }
+  })
+  client.on('message', message => {
+      if (message.content === 'no.invite') {
+          const embed = new Discord.MessageEmbed
+          embed.setTitle('Invite')
+          embed.setDescription('https://ayasbots.page.link/no-invite')
+      }
   })
 client.login('ODA5MjQ4MjY4NzQzNzM3MzY0.YCSVLg.jXFgFj-SJjziEhafTd-jGohVrvE');

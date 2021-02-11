@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var sentnow = 'yes'
+var sentnow = 'no'
 client.on("ready", () => {
     console.log("Bot Online");
     client.user.setActivity('To Messages, and no.help', { type: 'LISTENING' });

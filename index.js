@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+var sentnow = 'yes'
 client.on("ready", () => {
     console.log("Bot Online");
     client.user.setActivity('To Messages, and no.help', { type: 'LISTENING' });
@@ -11,7 +12,7 @@ client.on("message", msg => {
     } else if (msg.author.bot) {
         return;
     } else {
-        msg.channel.send("No");
+        msg.channel.send(sentnow);
     }
     
     

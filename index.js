@@ -8,6 +8,8 @@ client.on("message", msg => {
         msg.channel.send("Nope")
     } else if (msg.content === "No","nope","no","Nope") {
         msg.channel.send("Yes")
+    } else {
+        return;
     }
 })
 client.login('ODA5MjQ4MjY4NzQzNzM3MzY0.YCSVLg.jXFgFj-SJjziEhafTd-jGohVrvE');

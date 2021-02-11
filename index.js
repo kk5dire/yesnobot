@@ -88,7 +88,7 @@ client.on('message', message => {
           embed.addField('no.ping - ', 'shows the bot ping')
           embed.addField('no.limit ', '-shows how to limit the bot to certain channels')
           embed.addField('no.invite', '-Invite the bot to another server')
-          embed.addField('<:ShieldWarning:746952447095996467> no.leave', '**REQUIRES: Manage_Guild** : Removes the bot from the entire server')
+          embed.addField('no.leave', '<:ShieldWarning:746952447095996467>**REQUIRES: Manage_Guild** : Removes the bot from the entire server')
           embed.setFooter('yesnobot')
           message.channel.send(embed);
       }

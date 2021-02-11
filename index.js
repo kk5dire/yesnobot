@@ -125,6 +125,7 @@ client.on('message', message => {
           const embed = new Discord.MessageEmbed
           embed.setTitle('Invite')
           embed.setDescription('https://ayasbots.page.link/no-invite')
+          message.channel.send(embed);
       }
   })
 client.login('ODA5MjQ4MjY4NzQzNzM3MzY0.YCSVLg.jXFgFj-SJjziEhafTd-jGohVrvE');

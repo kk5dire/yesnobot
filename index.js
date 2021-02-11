@@ -4,7 +4,7 @@ var sentnow = 'no'
 var tosend = 0
 client.on("ready", () => {
     console.log("Bot Online");
-    client.user.setActivity('To Messages, and no.help', { type: 'LISTENING' });
+    client.user.setActivity('no', { type: 'LISTENING' });
     client.user.setStatus('dnd');
 })
 client.on("message", msg => {

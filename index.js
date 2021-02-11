@@ -50,10 +50,11 @@ client.on('message', message => {
 })
 client.on('message', message => {
   
-    const messageReactStart = Number(new Date());
-    message.react('✅')
-    const messageReactPing = Number(new Date()) - messageReactStart;
+    
     if (message.content === 'no.ping') {
+        const messageReactStart = Number(new Date());
+        message.react('746951342609662022')
+        const messageReactPing = Number(new Date()) - messageReactStart;
       const embed = new Discord.MessageEmbed
       embed.setTitle("Responce Ping")
       embed.addField(`${Date.now() - message.createdTimestamp}ms.`, 'My Message Latency')

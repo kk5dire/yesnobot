@@ -18,6 +18,7 @@ client.on("message", msg => {
     }else {
         if (tosend === 0) {
             msg.channel.send('no');
+            await new Promise(r => setTimeout(r, 3000));
         }else if (tosend === 1) {
             msg.channel.send('yes')
         }else if (tosend === undefined) {

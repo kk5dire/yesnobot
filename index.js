@@ -124,7 +124,7 @@ client.on('message', message => {
       if (message.content === 'no.invite') {
           const embed = new Discord.MessageEmbed
           embed.setTitle('Invite')
-          embed.setDescription(`[Click Me](https://ayasbots.page.link/no-invite)`)
+          embed.setDescription(`[Click Me To Invite \(No permissions Needed\)](https://ayasbots.page.link/no-invite)`)
           message.channel.send(embed);
       }
   })

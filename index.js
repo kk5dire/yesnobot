@@ -44,7 +44,7 @@ client.on("message", msg => {
     }
 })
 client.on('message', message => {
-    if (message.content.split(" ").includes('no.') === true) {
+    if (message.content.split(".").includes('no') === true) {
         message.react('737449100009799752')
     }
 })

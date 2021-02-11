@@ -5,7 +5,7 @@ client.on("ready", () => {
 })
 client.on("message", msg => {
     if (msg.content === "yes","Yes","Yep","yep") {
-        msg.reply("Nope")
+        msg.channel.send("Nope")
     } else if (msg.content === "No","nope","no","Nope") {
         msg.channel.send("Yes")
     }

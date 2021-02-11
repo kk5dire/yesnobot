@@ -134,7 +134,14 @@ client.on('message', message => {
      if (message.content === 'no.eval') {
 if (message.author.id !== '686039988605026304') return;
 try {
-    const output = eval(args.join(' '));
+    const code = args.join(" ");
+    let evaled = eval(code);
+
+    if (typeof evaled !== "string")
+       evaled = require("util").inspect(evaled);
+
+       message.channel.send(evaled, {code:"x1"});
+
 } catch (err) {
     message.channel.send(`\`ERROR\` \`\`\`xl\n${err}\n\`\`\``);
 

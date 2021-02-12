@@ -90,12 +90,18 @@ client.on('message', message => {
           embed.addField('no.ping - ', 'shows the bot ping')
           embed.addField('no.limit ', '-shows how to limit the bot to certain channels')
           embed.addField('no.invite', '-Invite the bot to another server')
+          embed.addField('no.+help', ('shows more help commands'))
+          embed.setFooter('help page 1')
+          message.channel.send(embed);
+      } else if (message.content === 'no.+help') {
+          const embed = new Discord.MessageEmbed
+          embed.setTitle('Help Menu #2')
           embed.addField('no.kill', `<:checklist:740365693442064414> **PARAMETERS: target** :-a kill command i used in a bot made by me and IYA#2082 [Website](https://www.pwetzel.ml) `)
           embed.addField('no.leave', '<:ShieldWarning:746952447095996467>**REQUIRES: Manage_Guild** : Removes the bot from the entire server')
           embed.addField('no.evaluation', '<:ShieldWarning:746952447095996467>**REQUIRES: BOT_Mangagment** : Evaluate Javascript Code \(Does not interact with server\)')
           embed.addField('no.snipe', '<:Image_not_found:754483783545127023> **INDEV: For Codebase**: A command to reveal deleted and edited messages/images')
-          embed.setFooter('yesnobot')
-          message.channel.send(embed);
+          embed.setFooter('help page 2')
+          message.channel.send(embed)
       }
   })
   client.on('message', message => {

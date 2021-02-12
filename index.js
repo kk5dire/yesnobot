@@ -48,9 +48,9 @@ client.on("message", msg => {
         msg.channel.send('yes')
     }else if (tosend === undefined) {
         msg.channel.send('oops')
-    }else if (msg.content.split(" ").includes('gay?') === true) {
-        msg.channel.send('acually nvm that gay af')
-    }else if (msg.content.split(" ").includes('straight?') === true) {
+    }else if (msg.content.split(" ").includes('gay') === true) {
+        msg.channel.send('acually that gay af')
+    }else if (msg.content.split(" ").includes('straight') === true) {
         msg.channel.send('no straight here')
     }else if (msg.content.split(" ").includes('aya') === true) {
         msg.channel.send('but no matter what aya is straight')

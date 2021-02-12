@@ -93,7 +93,7 @@ client.on('message', message => {
           embed.addField('no.kill', `<:checklist:740365693442064414> **PARAMETERS: target** :-a kill command i used in a bot made by me and IYA#2082 [Website](https://www.pwetzel.ml) `)
           embed.addField('no.leave', '<:ShieldWarning:746952447095996467>**REQUIRES: Manage_Guild** : Removes the bot from the entire server')
           embed.addField('no.evaluation', '<:ShieldWarning:746952447095996467>**REQUIRES: BOT_Mangagment** : Evaluate Javascript Code \(Does not interact with server\)')
-          embed.addField('no.snipe', '<:Image_not_found:754483783545127023> **INDEV: For Codebase**: A command to reveal deleted and edited messages')
+          embed.addField('no.snipe', '<:Image_not_found:754483783545127023> **INDEV: For Codebase**: A command to reveal deleted and edited messages/images')
           embed.setFooter('yesnobot')
           message.channel.send(embed);
       }

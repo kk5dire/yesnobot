@@ -50,6 +50,12 @@ client.on("message", msg => {
         msg.channel.send('oops')
     }else if (msg.content.split(" ").includes('gay') === true) {
         msg.channel.send('acually nvm that gay af')
+    }else if (msg.content.split(" ").includes('straight') === true) {
+        msg.channel.send('no straight here')
+    }else if (msg.content.split(" ").includes('aya') === true) {
+        msg.channel.send('but no matter what aya is straight')
+    }else if (msg.content.split(" ").includes('kk5dire') === true) {
+        msg.channel.send('but no matter what aya is straight')
     }else {
         msg.react('809306253686997012')
     }

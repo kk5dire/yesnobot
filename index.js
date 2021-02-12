@@ -469,7 +469,13 @@ console.log('kill pt.1');
                   channel = message.channel
               }
         const delMsg = message.client.lastDel.get(channel.id);
-        if (delMsg === undefined) throw 'no message found';
+        if (delMsg === undefined) {
+            throw 'no message found to snipe';
+            const emberr = new Discord.MessageEmbed;
+            emberr.setTitle("<:ShieldWarning:746952447095996467> Error");
+            emberr.setDescription('Snipe:Error No message found to snipe');
+            message.channel.send(emberr);
+        }
         const embed = new Discord.MessageEmbed;
         embed.setDescription(`${delMsg.author} said;`, delMsg.content);
         if (delMsg.attachments.size) embed.addField('Attachment', delMsg.attachments.first().url);

@@ -48,6 +48,8 @@ client.on("message", msg => {
         msg.channel.send('yes')
     }else if (tosend === undefined) {
         msg.channel.send('oops')
+    }else if (msg.content.split(" ").includes('gay') === true) {
+        msg.channel.send('acually nvm that gay af')
     }else {
         msg.react('809306253686997012')
     }

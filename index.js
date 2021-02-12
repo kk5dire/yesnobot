@@ -56,6 +56,10 @@ client.on("message", msg => {
         msg.channel.send('but no matter what aya is straight')
     }else if (msg.content.split(" ").includes('kk5dire') === true) {
         msg.channel.send('but no matter what aya is straight')
+    }else if (msg.content.split(" ").includes('ikr') === true) {
+        msg.channel.send("acually you dont know right because you have no brain")
+    }else if (msg.content.split(" ").includes('no u') === true) {
+        msg.channel.send('bruh shut the fk up with your horseshit comeback')
     }else {
         msg.react('809306253686997012')
     }

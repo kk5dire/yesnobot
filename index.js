@@ -2,6 +2,11 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const { Permissions } = require('discord.js');
 const { kill } = require('process');
+const lastDel = new Discord.Collection();
+client.lastDel = lastDel;
+//and edited messages for the editsnipe command
+const lastEdits = new Discord.Collection();
+client.lastEdits = lastEdits;
 var sentnow = 'no'
 var tosend = 0
 client.on("ready", () => {
@@ -452,6 +457,25 @@ console.log('kill pt.1');
       embed.setDescription(killMsg)
       message.channel.send(embed);
      console.log('sent embed');
+      }
+  })
+  client.on('message', message => {
+      if (message.content === 'no.snipe') {
+          try {
+              let channel;
+              if(message.mentions.channels.size) {
+                  channel = message.mentions.channels.first();
+              } else {
+                  channel = message.channel
+              }
+        const delMsg = message.client.lastDel.get(channel.id);
+        if (delMsg === undefined) throw 'no message found';
+        const embed = new Discord.MessageEmbed;
+        embed.setDescription(`${delMsg.author} said;`, delMsg.content);
+        if (delMsg.attachments.size) embed.addField('Attachment', delMsg.attachments.first().url);
+          } catch (err) {
+              return console.log(err)
+          }
       }
   })
 client.login('ODA5MjQ4MjY4NzQzNzM3MzY0.YCSVLg.jXFgFj-SJjziEhafTd-jGohVrvE');

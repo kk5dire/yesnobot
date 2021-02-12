@@ -11,6 +11,7 @@ var sentnow = 'no'
 var tosend = 0
 const maxhelppages = 2
 const newhelpdes = '<:checklist:740365693442064414> **PARAMETERS: # = page number** : goes to a specific page'
+const linetext = '---------------------------'
 client.on("ready", () => {
     console.log("Bot Online");
     client.user.setPresence({ activity: { name: 'NOOO!!!! | no.help' }, status: 'dnd' });
@@ -90,7 +91,7 @@ client.on('message', message => {
         embed.addField('no.ping - ', 'shows the bot ping')
         embed.addField('no.limit ', '-shows how to limit the bot to certain channels')
         embed.addField('no.invite', '-Invite the bot to another server')
-        embed.addField('**End of Page**')
+        embed.addField('**End of Page**', linetext)
         embed.addField('no.help#', newhelpdes)
         embed.setFooter(`Page 1/${maxhelppages}`)
         message.channel.send(embed);
@@ -101,7 +102,7 @@ client.on('message', message => {
         embed.addField('no.leave', '<:ShieldWarning:746952447095996467>**REQUIRES: Manage_Guild** : Removes the bot from the entire server')
         embed.addField('no.evaluation', '<:ShieldWarning:746952447095996467>**REQUIRES: BOT_Mangagment** : Evaluate Javascript Code \(Does not interact with server\)')
         embed.addField('no.snipe', '<:Image_not_found:754483783545127023> **INDEV: For Codebase**: A command to reveal deleted and edited messages/images')
-        embed.addField('**End of Page**')
+        embed.addField('**End of Page**'), linetext
         embed.addField('no.help#', newhelpdes)
         embed.setFooter(`Page 2/${maxhelppages}`)
         message.channel.send(embed)

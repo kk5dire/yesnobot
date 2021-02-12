@@ -1,10 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const { Permissions } = require('discord.js');
-const EventEmitter = require('events');
 const { kill } = require('process');
 const lastDel = new Discord.Collection();
-EventEmitter.setMaxListeners(100);
 client.lastDel = lastDel;
 //and edited messages for the editsnipe command
 const lastEdits = new Discord.Collection();

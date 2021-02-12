@@ -60,6 +60,10 @@ client.on("message", msg => {
         msg.channel.send("acually you dont know right because you have no brain")
     }else if (msg.content.split(" ").includes('no u') === true) {
         msg.channel.send('bruh shut the fk up with your horseshit comeback')
+    }else if (msg.content.split(" ").includes("small") === true) {
+        msg.channel.send('0.001nm')
+    }else if (msg.content.split(" ").includes('big') === true) {
+        msg.channel.send("nope small af")
     }else {
         msg.react('809306253686997012')
     }

@@ -471,6 +471,7 @@ client.on('message', message => {
         
                 //create an embed for the kill message
               const embed = new Discord.MessageEmbed
+              embed.setColor('#FF0040')
               embed.setDescription(killMsg)
               message.channel.send(embed);
              console.log('sent embed');

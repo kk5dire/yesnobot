@@ -9,6 +9,7 @@ const lastEdits = new Discord.Collection();
 client.lastEdits = lastEdits;
 var sentnow = 'no'
 var tosend = 0
+const maxhelppages = 2
 client.on("ready", () => {
     console.log("Bot Online");
     client.user.setPresence({ activity: { name: 'NOOO!!!! | no.help' }, status: 'dnd' });
@@ -91,7 +92,7 @@ client.on('message', message => {
           embed.addField('no.limit ', '-shows how to limit the bot to certain channels')
           embed.addField('no.invite', '-Invite the bot to another server')
           embed.addField('no.+help', ('shows more help commands'))
-          embed.setFooter('help page 1')
+          embed.setFooter(`Page 1/${maxhelppages}`)
           message.channel.send(embed);
       } else if (message.content === 'no.+help') {
           const embed = new Discord.MessageEmbed
@@ -100,7 +101,7 @@ client.on('message', message => {
           embed.addField('no.leave', '<:ShieldWarning:746952447095996467>**REQUIRES: Manage_Guild** : Removes the bot from the entire server')
           embed.addField('no.evaluation', '<:ShieldWarning:746952447095996467>**REQUIRES: BOT_Mangagment** : Evaluate Javascript Code \(Does not interact with server\)')
           embed.addField('no.snipe', '<:Image_not_found:754483783545127023> **INDEV: For Codebase**: A command to reveal deleted and edited messages/images')
-          embed.setFooter('help page 2')
+          embed.setFooter(`Page 2/${maxhelppages}`)
           message.channel.send(embed)
       }
   })

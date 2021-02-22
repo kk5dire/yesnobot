@@ -1,5 +1,22 @@
 {
+  "name": "yesnobot",
+  "version": "1.0.0",
+  "description": "-",
+  "main": "index.js",
   "dependencies": {
-    "discord.js": "^12.5.1"
-  }
+    "bufferutil": "^4.0.2",
+    "discord.js": "^12.5.1",
+    "zlib-sync": "^0.1.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "discord",
+    "api",
+    "bot"
+  ],
+  "author": "kk5dire",
+  "license": "GPL-3.0"
 }

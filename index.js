@@ -501,3 +501,8 @@ client.on('message', message => {
   
   
 client.login('ODA5MjQ4MjY4NzQzNzM3MzY0.YCSVLg.jXFgFj-SJjziEhafTd-jGohVrvE');
+
+//For any unhandled errors
+process.on("unhandledRejection", (err) => {
+console.log(err);
+});

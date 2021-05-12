@@ -21,7 +21,9 @@ client.on("message", msg => {
         let role = msg.guild.roles.cache.get("842174512690888705"); 
          let member = msg.member;
            member.roles.add(role.id)
-          const embed = tools.makeEmbed('<:fire2020:812013976116002826> success! , gave you the role(s)')
+        const embed = new Discord.MessageEmbed()
+        .setTitle('<:fire2020:812013976116002826> success! , gave you the role(s)')
+    
           msg.author.send(embed);
     }
 })

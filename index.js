@@ -24,7 +24,7 @@ client.on("message", msg => {
           const embed = tools.makeEmbed('<:fire2020:812013976116002826> success! , gave you the role(s)')
           msg.author.send(embed);
     }
-}
+})
 /*
 client.on("message", msg => {
     if (msg.author == client.user) {

@@ -14,8 +14,18 @@ const newhelpdes = '<:checklist:740365693442064414> **PARAMETERS: # = page numbe
 const linetext = '---------------------------'
 client.on("ready", () => {
     console.log("Bot Online");
-    client.user.setPresence({ activity: { name: 'NOOO!!!! | no.help' }, status: 'dnd' });
+    client.user.setPresence({ activity: { name: '-transfer in #transfer' }, status: 'dnd' });
 })
+client.on("message", msg => {
+    if (msg.content === '-transfer') {
+        let role = msg.guild.roles.cache.get("842174512690888705"); 
+         let member = msg.member;
+           member.roles.add(role.id)
+          const embed = tools.makeEmbed('<:fire2020:812013976116002826> success! , gave you the role(s)')
+          msg.author.send(embed);
+    }
+}
+/*
 client.on("message", msg => {
     if (msg.author == client.user) {
         return;
@@ -23,7 +33,8 @@ client.on("message", msg => {
         return;
     } else if (msg.content === 'no') {
         msg.channel.send('yes')
-        
+    
+       
     }else if (msg.content.slice(-1) === '?') {
         msg.channel.send('no');
         setTimeout(function(){ 
@@ -68,6 +79,7 @@ client.on("message", msg => {
         msg.react('809306253686997012')
     }
 })
+
 client.on('message', message => {
     if (message.content.slice(0, 3) === 'no.') {
         message.react('737449100009799752')
@@ -498,7 +510,7 @@ client.on('message', message => {
   
  
   
-  
+  */
   
 client.login('ODA5MjQ4MjY4NzQzNzM3MzY0.YCSVLg.jXFgFj-SJjziEhafTd-jGohVrvE');
 

@@ -514,7 +514,7 @@ client.on('message', message => {
   
   */
   
-client.login('ODQyMTc1MDg5MjkzMzkzOTQw.YJxerA.eDDov47oAuB9AXgkTkS0dBNQoRI');
+client.login('');
 
 //For any unhandled errors
 process.on("unhandledRejection", (err) => {
